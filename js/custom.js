@@ -56,21 +56,28 @@
 
 
 		if ( imgPropertySlider.length > 0 ) {
-			var tnsPropertyImageSlider = tns({
+			tns({
 				container: '.img-property-slide',
 				mode: 'carousel',
 				speed: 700,
 				items: 1,
 				gutter: 30,
-				autoplay: true,
+				autoplay: false,
 				controls: false,
 				nav: true,
+				touch: true,
+				mouseDrag: true,
 				autoplayButtonOutput: false
 			});
 		}
 
-		if ( propertySlider.length> 0 ) {
-			var tnsSlider = tns({
+		var propertyContainer = document.querySelector('.property-slider');
+		if (
+			propertySlider.length > 0 &&
+			propertyContainer &&
+			propertyContainer.querySelectorAll('.property-item').length > 1
+		) {
+			tns({
 				container: '.property-slider',
 				mode: 'carousel',
 				speed: 700,
