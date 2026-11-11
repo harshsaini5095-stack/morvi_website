@@ -130,6 +130,12 @@
 }
 
 .testimonial {
+	.testimonial-avatar {
+		aspect-ratio: 1;
+		object-fit: cover;
+		object-position: center;
+	}
+
 	blockquote {
 		font-style: 18px;
 		color: $black;

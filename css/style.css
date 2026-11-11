@@ -9755,6 +9755,11 @@ textarea {
       .section .heading {
         font-size: 36px; } }
 
+.testimonial .testimonial-avatar {
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center; }
+
 .testimonial blockquote {
   font-style: 18px;
   color: #000; }
