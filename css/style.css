@@ -9755,6 +9755,14 @@ textarea {
       .section .heading {
         font-size: 36px; } }
 
+.testimonial {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  padding: 28px;
+  margin: 10px;
+  height: calc(100% - 20px); }
+
 .testimonial .testimonial-avatar {
   aspect-ratio: 1;
   object-fit: cover;
@@ -9763,6 +9771,23 @@ textarea {
 .testimonial blockquote {
   font-style: 18px;
   color: #000; }
+
+@media (max-width: 767.98px) {
+  .hero, .hero > .container > .row, .hero-slide .img {
+    min-height: 520px; }
+  .section {
+    padding-top: 3rem;
+    padding-bottom: 3rem; }
+  .testimonial {
+    padding: 22px;
+    margin: 6px;
+    height: calc(100% - 12px); }
+    .testimonial .testimonial-avatar {
+      width: 96px !important; }
+  .site-footer {
+    padding: 48px 0; }
+    .site-footer .widget .links {
+      width: auto; } }
 
 .bg-image {
   background-size: cover;

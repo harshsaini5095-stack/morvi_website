@@ -130,6 +130,13 @@
 }
 
 .testimonial {
+	background: $white;
+	border-radius: 16px;
+	box-shadow: 0 12px 30px rgba($black, .08);
+	padding: 28px;
+	margin: 10px;
+	height: calc(100% - 20px);
+
 	.testimonial-avatar {
 		aspect-ratio: 1;
 		object-fit: cover;
@@ -139,6 +146,30 @@
 	blockquote {
 		font-style: 18px;
 		color: $black;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.hero, .hero > .container > .row, .hero-slide .img {
+		min-height: 520px;
+	}
+	.section {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+	}
+	.testimonial {
+		padding: 22px;
+		margin: 6px;
+		height: calc(100% - 12px);
+		.testimonial-avatar {
+			width: 96px !important;
+		}
+	}
+	.site-footer {
+		padding: 48px 0;
+		.widget .links {
+			width: auto;
+		}
 	}
 }
 

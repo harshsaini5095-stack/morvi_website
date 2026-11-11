@@ -10,7 +10,25 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Untree.co" />
-    <link rel="icon" type="image/jpeg" href="images/logo_correct.jpeg" />
+    <link id="site-favicon" rel="icon" type="image/jpeg" href="images/logo_correct.jpeg" />
+    <script>
+      (() => {
+        const logo = new Image();
+        logo.src = "images/logo_correct.jpeg";
+        logo.onload = () => {
+          const canvas = document.createElement("canvas");
+          canvas.width = canvas.height = 128;
+          const context = canvas.getContext("2d");
+          context.beginPath();
+          context.arc(64, 64, 62, 0, Math.PI * 2);
+          context.clip();
+          context.drawImage(logo, 0, 0, 128, 128);
+          const icon = document.getElementById("site-favicon");
+          icon.href = canvas.toDataURL("image/png");
+          icon.type = "image/png";
+        };
+      })();
+    </script>
 
     <meta
       name="description"
@@ -35,7 +53,7 @@
     <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/style.css" />
 
-    <title>Morvi Infratech | Real estate &amp; construction in Vrindavan</title>
+    <title>Morvi</title>
   </head>
   <body>
     <div class="site-mobile-menu site-navbar-target">
@@ -57,7 +75,7 @@
               class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end"
             >
               <li class="active"><a href="index.html">Home</a></li>
-              <li><a href="packages.html">Packages</a></li>
+              <li><a href="packages.html">Home Package</a></li>
               <li><a href="property-single.html">Shriji Sharnam</a></li>
               <li><a href="services.html">Services</a></li>
               <li><a href="about.html">About</a></li>
@@ -85,7 +103,7 @@
         ></div>
         <div
           class="img overlay"
-          style="background-image: url('images/logo_correct.jpeg')"
+          style="background-image: url('images/hero_bg_2.jpg')"
         ></div>
         <div
           class="img overlay"
@@ -274,7 +292,7 @@
                   <span class="icon-star text-warning"></span>
                   <span class="icon-star text-warning"></span>
                 </div>
-                <h3 class="h5 text-primary mb-4">Aashiyana package homeowners</h3>
+                <h3 class="h5 text-primary mb-4">Aashiyana Home Package</h3>
                 <blockquote>
                   <p>
                     &ldquo;Our Aashiyana package gave us a thoughtfully planned
@@ -301,7 +319,7 @@
                   <span class="icon-star text-warning"></span>
                   <span class="icon-star text-warning"></span>
                 </div>
-                <h3 class="h5 text-primary mb-4">Haveli package homeowner</h3>
+                <h3 class="h5 text-primary mb-4">Haveli Home Package</h3>
                 <blockquote>
                   <p>
                     &ldquo;Morvi Infratech turned our Haveli package vision into a
@@ -313,6 +331,38 @@
                 <p class="text-black-50">Business owner, Vrindavan</p>
               </div>
             </div>
+
+            <div class="item"><div class="testimonial">
+              <img src="images/testimonial-sikh-couple.jpg" alt="Happy homebuyers" class="img-fluid rounded-circle w-25 mb-4 testimonial-avatar" />
+              <div class="rate"><span class="icon-star text-warning"></span><span class="icon-star text-warning"></span><span class="icon-star text-warning"></span><span class="icon-star text-warning"></span><span class="icon-star text-warning"></span></div>
+              <h3 class="h5 text-primary mb-4">Family home in Vrindavan</h3>
+              <blockquote><p>&ldquo;The planning was clear from the first meeting. Morvi helped us create a bright, comfortable home that works beautifully for visits from our whole family.&rdquo;</p></blockquote>
+              <p class="text-black-50">Homeowners, Delhi NCR</p>
+            </div></div>
+
+            <div class="item"><div class="testimonial">
+              <img src="images/testimonial-south-asian-couple.jpg" alt="Happy homeowners" class="img-fluid rounded-circle w-25 mb-4 testimonial-avatar" />
+              <div class="rate"><span class="icon-star text-warning"></span><span class="icon-star text-warning"></span><span class="icon-star text-warning"></span><span class="icon-star text-warning"></span><span class="icon-star text-warning"></span></div>
+              <h3 class="h5 text-primary mb-4">A home built with care</h3>
+              <blockquote><p>&ldquo;The team balanced our design preferences with practical construction advice. Weekly updates made building our Vrindavan home feel simple and transparent.&rdquo;</p></blockquote>
+              <p class="text-black-50">Homeowners, Mathura</p>
+            </div></div>
+
+            <div class="item"><div class="testimonial">
+              <img src="images/testimonial-indian-couple.jpg" alt="Indian couple who are homeowners" class="img-fluid rounded-circle w-25 mb-4 testimonial-avatar" />
+              <div class="rate"><span class="icon-star text-warning"></span><span class="icon-star text-warning"></span><span class="icon-star text-warning"></span><span class="icon-star text-warning"></span><span class="icon-star text-warning"></span></div>
+              <h3 class="h5 text-primary mb-4">Thoughtful construction support</h3>
+              <blockquote><p>&ldquo;Every choice—from the layout to the finishes—was explained clearly. We appreciated the quality checks and the respectful way the site team worked.&rdquo;</p></blockquote>
+              <p class="text-black-50">Homeowners, Agra</p>
+            </div></div>
+
+            <div class="item"><div class="testimonial">
+              <img src="images/testimonial-traditional-couple.jpg" alt="Indian couple celebrating their new home" class="img-fluid rounded-circle w-25 mb-4 testimonial-avatar" />
+              <div class="rate"><span class="icon-star text-warning"></span><span class="icon-star text-warning"></span><span class="icon-star text-warning"></span><span class="icon-star text-warning"></span><span class="icon-star text-warning"></span></div>
+              <h3 class="h5 text-primary mb-4">A space that feels like home</h3>
+              <blockquote><p>&ldquo;Morvi translated our ideas into a warm, elegant home in Vrindavan. The final handover was organised, on time, and exceeded our expectations.&rdquo;</p></blockquote>
+              <p class="text-black-50">Homeowners, Uttar Pradesh</p>
+            </div></div>
 
           </div>
         </div>
@@ -506,9 +556,6 @@
                     <a href="https://www.facebook.com/profile.php?id=61583554314977" target="_blank" rel="noopener noreferrer" aria-label="Morvi Infratech on Facebook"><span class="icon-facebook"></span></a>
                   </li>
                   <li class="list-inline-item">
-                    <a href="#"><span class="icon-linkedin"></span></a>
-                  </li>
-                  <li class="list-inline-item">
                     <a href="https://www.instagram.com/morvi.infratech/" target="_blank" rel="noopener noreferrer" aria-label="Morvi Infratech on Instagram"><span class="icon-instagram"></span></a>
                   </li>
                 </ul>
@@ -538,9 +585,6 @@
                   </li>
                   <li class="list-inline-item">
                     <a href="https://www.facebook.com/profile.php?id=61583554314977" target="_blank" rel="noopener noreferrer" aria-label="Morvi Infratech on Facebook"><span class="icon-facebook"></span></a>
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="#"><span class="icon-linkedin"></span></a>
                   </li>
                   <li class="list-inline-item">
                     <a href="https://www.instagram.com/morvi.infratech/" target="_blank" rel="noopener noreferrer" aria-label="Morvi Infratech on Instagram"><span class="icon-instagram"></span></a>
@@ -574,9 +618,6 @@
                     <a href="https://www.facebook.com/profile.php?id=61583554314977" target="_blank" rel="noopener noreferrer" aria-label="Morvi Infratech on Facebook"><span class="icon-facebook"></span></a>
                   </li>
                   <li class="list-inline-item">
-                    <a href="#"><span class="icon-linkedin"></span></a>
-                  </li>
-                  <li class="list-inline-item">
                     <a href="https://www.instagram.com/morvi.infratech/" target="_blank" rel="noopener noreferrer" aria-label="Morvi Infratech on Instagram"><span class="icon-instagram"></span></a>
                   </li>
                 </ul>
@@ -597,7 +638,7 @@
               <ul class="list-unstyled links">
                 <li><a href="tel:+919910373710">+91 9910373710</a></li>
                 <li>
-                  <a href="mailto:info@morviinfratech.com">info@morviinfratech.com</a>
+                  <a href="mailto:morviinfratech@gmail.com">morviinfratech@gmail.com</a>
                 </li>
               </ul>
             </div>
@@ -610,7 +651,7 @@
               <ul class="list-unstyled float-start links">
                 <li><a href="about.html">About us</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="packages.html">Packages</a></li>
+                <li><a href="packages.html">Home Package</a></li>
                 <li><a href="property-single.html">Shriji Sharnam</a></li>
               </ul>
               <ul class="list-unstyled float-start links">
@@ -640,15 +681,6 @@
                 </li>
                 <li>
                   <a href="https://www.facebook.com/profile.php?id=61583554314977" target="_blank" rel="noopener noreferrer" aria-label="Morvi Infratech on Facebook"><span class="icon-facebook"></span></a>
-                </li>
-                <li>
-                  <a href="#"><span class="icon-linkedin"></span></a>
-                </li>
-                <li>
-                  <a href="#"><span class="icon-pinterest"></span></a>
-                </li>
-                <li>
-                  <a href="#"><span class="icon-dribbble"></span></a>
                 </li>
               </ul>
             </div>

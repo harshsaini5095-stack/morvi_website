@@ -10,7 +10,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Untree.co" />
-    <link rel="icon" type="image/jpeg" href="images/logo_correct.jpeg" />
+    <link id="site-favicon" rel="icon" type="image/jpeg" href="images/logo_correct.jpeg" />
+    <script>
+      (() => {
+        const logo = new Image(); logo.src = "images/logo_correct.jpeg";
+        logo.onload = () => { const canvas = document.createElement("canvas"); canvas.width = canvas.height = 128; const context = canvas.getContext("2d"); context.beginPath(); context.arc(64, 64, 62, 0, Math.PI * 2); context.clip(); context.drawImage(logo, 0, 0, 128, 128); const icon = document.getElementById("site-favicon"); icon.href = canvas.toDataURL("image/png"); icon.type = "image/png"; };
+      })();
+    </script>
 
     <meta
       name="description"
@@ -54,7 +60,7 @@
               class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end"
             >
               <li><a href="index.html">Home</a></li>
-              <li><a href="packages.html">Packages</a></li>
+              <li><a href="packages.html">Home Package</a></li>
               <li><a href="property-single.html">Shriji Sharnam</a></li>
               <li><a href="services.html">Services</a></li>
               <li><a href="about.html">About</a></li>
@@ -838,7 +844,7 @@
               <ul class="list-unstyled links">
                 <li><a href="tel:+919910373710">+91 9910373710</a></li>
                 <li>
-                  <a href="mailto:info@morviinfratech.com">info@morviinfratech.com</a>
+                  <a href="mailto:morviinfratech@gmail.com">morviinfratech@gmail.com</a>
                 </li>
               </ul>
             </div>
@@ -851,7 +857,7 @@
               <ul class="list-unstyled float-start links">
                 <li><a href="about.html">About us</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="packages.html">Packages</a></li>
+                <li><a href="packages.html">Home Package</a></li>
                 <li><a href="property-single.html">Shriji Sharnam</a></li>
               </ul>
               <ul class="list-unstyled float-start links">
@@ -881,15 +887,6 @@
                 </li>
                 <li>
                   <a href="https://www.facebook.com/profile.php?id=61583554314977" target="_blank" rel="noopener noreferrer" aria-label="Morvi Infratech on Facebook"><span class="icon-facebook"></span></a>
-                </li>
-                <li>
-                  <a href="#"><span class="icon-linkedin"></span></a>
-                </li>
-                <li>
-                  <a href="#"><span class="icon-pinterest"></span></a>
-                </li>
-                <li>
-                  <a href="#"><span class="icon-dribbble"></span></a>
                 </li>
               </ul>
             </div>
