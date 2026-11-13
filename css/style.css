@@ -10738,6 +10738,7 @@ body.page-inner .site-nav .menu-bg-wrap {
 }
 .site-footer .social li a {
   background: rgba(255, 255, 255, 0.12);
+  color: #fff;
 }
 .site-footer .social li a:hover {
   background: var(--gold);
@@ -10985,8 +10986,7 @@ h1.heading {
    ============================================================ */
 
 /* Global body — Raleway replaces Work Sans */
-body,
-body * {
+body {
   font-family: 'Raleway', sans-serif;
 }
 
@@ -11014,9 +11014,16 @@ h4, .h4,
 .meta,
 .breadcrumb,
 .site-footer,
-.site-footer *,
 address {
   font-family: 'Raleway', sans-serif !important;
+}
+
+/* Explicitly protect icon fonts from global typography overrides */
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon' !important;
+}
+[class^="flaticon-"], [class*=" flaticon-"] {
+  font-family: 'Flaticon' !important;
 }
 
 /* Body text — Raleway 400, comfortable line-height */
