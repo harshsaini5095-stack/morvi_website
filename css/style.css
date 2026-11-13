@@ -10566,3 +10566,480 @@ nav[aria-label="breadcrumb"] li:before {
   font-size: 14px; }
   .package-notes li + li {
     margin-top: 6px; }
+
+
+/* ============================================================
+   MORVI INFRATECH — LUXURY UPGRADE OVERRIDES
+   ============================================================ */
+
+/* ── 1. Serif Display Font for Headings ─────────────────────── */
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+.heading,
+.price span,
+.hero .heading {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  letter-spacing: 0.01em;
+}
+
+/* ── 2. Gold Accent & Cream Page Background ──────────────────── */
+:root {
+  --gold:       #c9a96e;
+  --gold-light: #f5ead8;
+  --cream:      #faf8f4;
+  --navy:       #00204a;
+}
+
+body {
+  background-color: var(--cream);
+}
+
+/* ── 3. Hero — Gradient Overlay (cinematic bottom-to-top) ────── */
+.hero-slide .img.overlay::before {
+  background: linear-gradient(
+    to top,
+    rgba(0, 20, 50, 0.82) 0%,
+    rgba(0, 20, 50, 0.32) 55%,
+    rgba(0,  0,  0, 0.00) 100%
+  );
+}
+
+/* Gold decorative rule above hero heading */
+.hero .heading::before {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 2px;
+  background: var(--gold);
+  margin: 0 auto 20px;
+}
+
+/* Hero subtitle line */
+.hero-sub {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  margin-bottom: 28px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+}
+
+/* ── 4. Navbar — Transparent on load, frosted on scroll ──────── */
+.site-nav {
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+.site-nav.at-top .menu-bg-wrap {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.site-nav.scrolled .menu-bg-wrap {
+  background: rgba(0, 20, 50, 0.92) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.22) !important;
+}
+/* Inner pages keep the pill but navy, not teal */
+.hero.page-inner ~ * .site-nav .menu-bg-wrap,
+body.page-inner .site-nav .menu-bg-wrap {
+  background: rgba(0, 20, 50, 0.92);
+}
+
+/* ── 5. Section Spacing — More Breathing Room ────────────────── */
+.section {
+  padding-top:    6rem;
+  padding-bottom: 6rem;
+}
+@media (max-width: 767.98px) {
+  .section {
+    padding-top:    4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+/* ── 6. Package Cards — Gold Top Border + Hover Lift ─────────── */
+.package-card {
+  border-top: 3px solid var(--gold) !important;
+  border-radius: 4px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.package-card.haveli   { border-top-color: var(--gold) !important; }
+.package-card.structure { border-top-color: #3d5a80 !important; }
+.package-card.interior  { border-top-color: #8a6a3b !important; }
+.package-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0, 32, 74, 0.13);
+}
+.package-card .eyebrow {
+  color: var(--gold);
+}
+
+/* ── 7. Buttons — Refined Rectangle + Gold Variants ─────────── */
+.btn {
+  border-radius: 4px !important;
+  font-size: 12px;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  padding: 14px 36px !important;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 600;
+}
+.btn-primary {
+  background: var(--navy) !important;
+  color: #fff !important;
+}
+.btn-primary:hover {
+  background: #001533 !important;
+}
+.btn-gold {
+  background: var(--gold);
+  color: #fff;
+  border: none;
+}
+.btn-gold:hover {
+  background: #b8935a;
+  color: #fff;
+  top: -2px;
+  box-shadow: 0 12px 30px rgba(201, 169, 110, 0.35);
+}
+.btn-outline-gold {
+  border: 1.5px solid var(--gold) !important;
+  color: var(--gold) !important;
+  background: transparent !important;
+}
+.btn-outline-gold:hover {
+  background: var(--gold) !important;
+  color: #fff !important;
+}
+
+/* ── 8. Footer — Deep Navy ───────────────────────────────────── */
+.site-footer {
+  background: #00204a;
+  color: rgba(255, 255, 255, 0.60);
+}
+.site-footer h3,
+.site-footer .h3 {
+  color: var(--gold);
+}
+.site-footer a {
+  color: rgba(255, 255, 255, 0.58);
+  text-decoration: none;
+}
+.site-footer a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.site-footer address {
+  color: rgba(255, 255, 255, 0.58);
+}
+.site-footer p {
+  color: rgba(255, 255, 255, 0.50);
+}
+.site-footer .social li a {
+  background: rgba(255, 255, 255, 0.12);
+}
+.site-footer .social li a:hover {
+  background: var(--gold);
+  color: #fff;
+}
+
+/* ── 9. Shriji Sharnam — Serif Property Title ────────────────── */
+.property-item .property-content .price {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 28px;
+  color: var(--navy);
+}
+.property-item .property-content .price span::after {
+  background-color: var(--gold);
+}
+
+/* ── 10. Testimonials — Large Decorative Quote Mark ──────────── */
+.testimonial {
+  position: relative;
+  overflow: hidden;
+}
+.testimonial::before {
+  content: '\201C';
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 130px;
+  line-height: 1;
+  color: var(--gold);
+  opacity: 0.12;
+  position: absolute;
+  top: -10px;
+  left: 14px;
+  pointer-events: none;
+  z-index: 0;
+}
+.testimonial > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── 11. Page-inner Hero — Taller & More Cinematic ───────────── */
+.hero.page-inner,
+.hero.page-inner > .container > .row {
+  height: 80vh;
+  min-height: 420px;
+}
+
+/* ── 12. Heading Letter-Spacing & Weight ─────────────────────── */
+h2.heading,
+.font-weight-bold.heading,
+.heading {
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  line-height: 1.18;
+}
+h1.heading {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* ── 13. Hero Scroll Indicator ───────────────────────────────── */
+.scroll-cue {
+  position: absolute;
+  bottom: 44px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-family: 'Work Sans', sans-serif;
+}
+.scroll-cue__line {
+  width: 1px;
+  height: 52px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.6), rgba(255,255,255,0));
+  animation: scrollPulse 2.2s ease infinite;
+}
+@keyframes scrollPulse {
+  0%   { opacity: 0.3; transform: scaleY(0.8); }
+  50%  { opacity: 1;   transform: scaleY(1);   }
+  100% { opacity: 0.3; transform: scaleY(0.8); }
+}
+
+/* ── Box Features — Gold Top Rule ───────────────────────────── */
+.box-feature {
+  border-top: 3px solid var(--gold);
+  border-radius: 2px;
+  padding: 36px 28px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.box-feature:hover {
+  box-shadow: 0 16px 40px rgba(0, 32, 74, 0.10);
+  transform: translateY(-4px);
+}
+
+/* ── Section heading refinement ─────────────────────────────── */
+.text-primary.heading,
+.font-weight-bold.text-primary.heading {
+  color: var(--navy) !important;
+}
+
+/* ── Menu Background — Navy instead of Teal ─────────────────── */
+.menu-bg-wrap {
+  background-color: var(--navy) !important;
+}
+
+/* ── Package section on home — cream bg to match body ───────── */
+.section.bg-light {
+  background-color: #f0ece4 !important;
+}
+
+/* ── Eyebrow gold on all package cards ──────────────────────── */
+.package-card .eyebrow {
+  color: var(--gold) !important;
+}
+
+/* ── Page-inner hero heading — gold rule above ───────────────── */
+.hero.page-inner .heading::before {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 2px;
+  background: var(--gold);
+  margin: 0 auto 20px;
+}
+
+/* ── Partner / footer-cta section — give it gold bg ─────────── */
+.footer-cta h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+
+/* ── Shriji Sharnam city text ────────────────────────────────── */
+.property-item .property-content .city {
+  color: #5c6770;
+  font-size: 14px;
+}
+
+/* ── Box feature icon — gold tint ───────────────────────────── */
+.box-feature [class^="flaticon-"] {
+  color: var(--gold);
+}
+
+/* ── feature-h wrap-icon — navy ring on hover keeps gold ─────── */
+.feature-h:hover .wrap-icon,
+.feature-h:focus .wrap-icon {
+  border-color: var(--gold) !important;
+}
+.feature-h:hover [class^="icon-"],
+.feature-h:focus [class^="icon-"] {
+  color: var(--gold) !important;
+}
+
+/* ── Package table header — harmonise with navy ──────────────── */
+.package-table thead th {
+  background: var(--navy);
+}
+.package-table thead th.col-haveli   { background: #005555; }
+.package-table thead th.col-structure { background: #1d3557; }
+.package-table thead th.col-interior  { background: #6b5344; }
+
+/* ── Testimonial stars — ensure gold tone ───────────────────── */
+.icon-star.text-warning {
+  color: var(--gold) !important;
+}
+
+/* ── Smooth all transitions ─────────────────────────────────── */
+* { transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+
+/* ============================================================
+   NAVBAR OVERHAUL — Uniform across all pages
+   ============================================================ */
+
+/* Strip the pill shape entirely — full-width elegant bar */
+.menu-bg-wrap {
+  background-color: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 18px 24px !important;
+}
+
+/* Nav wrapper: always absolute at top */
+.site-nav {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  transition: background 0.45s ease, box-shadow 0.45s ease !important;
+}
+
+/* At top on EVERY page — fully transparent */
+.site-nav.at-top .menu-bg-wrap {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Scrolled on EVERY page — deep navy frosted glass */
+.site-nav.scrolled .menu-bg-wrap {
+  background: rgba(0, 20, 50, 0.95) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  box-shadow: 0 2px 32px rgba(0, 0, 0, 0.28) !important;
+}
+
+/* Inner page hero has static overlay, navbar needs initial colour so
+   content is readable even before scroll — use a subtle dark gradient */
+.site-nav.at-top.inner-page .menu-bg-wrap {
+  background: linear-gradient(to bottom, rgba(0,20,50,0.6) 0%, transparent 100%) !important;
+  box-shadow: none !important;
+}
+
+/* ============================================================
+   FONT SYSTEM — Consistent Luxury Typography
+   Cormorant Garamond (display) + Raleway (UI / body)
+   ============================================================ */
+
+/* Global body — Raleway replaces Work Sans */
+body,
+body * {
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Display headings — Cormorant Garamond */
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+.heading,
+.price span,
+.hero .heading,
+.footer-cta h2,
+.footer-cta .h2,
+.property-item .property-content .price {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  letter-spacing: 0.02em;
+}
+
+/* Nav links + buttons + eyebrows + labels — Raleway */
+.site-nav .site-menu > li > a,
+.logo,
+.btn,
+.package-card .eyebrow,
+.eyebrow,
+.meta,
+.breadcrumb,
+.site-footer,
+.site-footer *,
+address {
+  font-family: 'Raleway', sans-serif !important;
+}
+
+/* Body text — Raleway 400, comfortable line-height */
+p, li, td, th, label, input, textarea, blockquote {
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.75;
+}
+
+/* Nav menu items — lighter weight, spaced */
+.site-nav .site-navigation .site-menu > li > a {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Logo text — Cormorant for brand feel */
+.logo {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+/* Eyebrows (small category labels) */
+.package-card .eyebrow,
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* Heading sizes refined for Cormorant (needs slightly larger to match visual weight) */
+h1, .h1 { font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 600; }
+h2, .h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 400; }
+h3, .h3 { font-size: clamp(1.4rem, 2vw, 1.9rem); font-weight: 400; }
+
+/* Hero heading specifically */
+.hero .heading {
+  font-size: clamp(2.2rem, 5vw, 4rem) !important;
+  font-weight: 600 !important;
+  line-height: 1.1;
+}
+
+/* Section headings */
+.section .heading,
+h2.heading {
+  font-weight: 400;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+}

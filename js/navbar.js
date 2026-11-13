@@ -87,4 +87,29 @@
 	siteMenuClone();
 
 
+	// ── Luxury scroll-aware navbar — consistent on every page ──
+	var siteNav = document.querySelector('.site-nav');
+	var isHeroPage = document.querySelector('.hero:not(.page-inner)');
+	var isInnerPage = document.querySelector('.hero.page-inner');
+
+	function updateNav() {
+		if (!siteNav) return;
+		if (window.scrollY < 60) {
+			siteNav.classList.add('at-top');
+			siteNav.classList.remove('scrolled');
+		} else {
+			siteNav.classList.remove('at-top');
+			siteNav.classList.add('scrolled');
+		}
+	}
+
+	if (siteNav) {
+		// Mark inner pages so CSS can give them a slight dark tint at top
+		if (isInnerPage) siteNav.classList.add('inner-page');
+		// Start transparent on all pages
+		siteNav.classList.add('at-top');
+		window.addEventListener('scroll', updateNav, { passive: true });
+	}
+
+
 })()
