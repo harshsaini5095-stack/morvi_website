@@ -9665,7 +9665,7 @@ textarea {
 .hero {
   position: relative;
   background-size: cover;
-  background-position: cnter center;
+  background-position: center center;
   background-repeat: no-repeat;
   background-color: #00204a; }
   .hero.overlay {
@@ -10777,11 +10777,37 @@ body.page-inner .site-nav .menu-bg-wrap {
   z-index: 1;
 }
 
-/* ── 11. Page-inner Hero — Taller & More Cinematic ───────────── */
+/* ── 11. Page-inner Hero — Balanced & Responsive ─────────────── */
 .hero.page-inner,
 .hero.page-inner > .container > .row {
-  height: 80vh;
-  min-height: 420px;
+  height: 48vh;
+  min-height: 320px;
+  max-height: 440px;
+}
+@media (max-width: 767.98px) {
+  .hero.page-inner,
+  .hero.page-inner > .container > .row {
+    height: 260px;
+    min-height: 220px;
+  }
+  .hero.page-inner .heading {
+    font-size: 2rem !important;
+    margin-bottom: 15px;
+  }
+}
+
+/* ── 11b. Inner Page Sliders & Mobile Image Stability ─────────── */
+.img-property-slide img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@media (max-width: 767.98px) {
+  .img-about.dots:after {
+    display: none;
+  }
 }
 
 /* ── 12. Heading Letter-Spacing & Weight ─────────────────────── */
